@@ -2,7 +2,9 @@ import numpy as np
 import pandas as pd
 import cloudpickle
 import requests
-from io import BytesIO
+from import BytesIO
+import nltk
+nltk.download('stopwords')
 import streamlit as st
 import matplotlib.pyplot as plt
 import re
