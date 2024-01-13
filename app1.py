@@ -8,9 +8,11 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import yfinance as yf
 
+
 # Loading the trained machine learning model
-pickle_in = open("model.sav", "rb")
-model = pickle.load(pickle_in)
+model_path = "model.sav"
+with open(model_path, 'rb') as pickle_file:
+    model = cloudpickle.load(pickle_file)
 
 # Mapping dictionary for sentiment labels
 sentiment_mapping = {0: 'Bearish', 1: 'Bullish'}
