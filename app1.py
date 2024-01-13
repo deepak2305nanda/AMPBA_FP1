@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import cloudpickle
+import requests
+from io import BytesIO
 import streamlit as st
 import matplotlib.pyplot as plt
 import re
@@ -10,9 +12,13 @@ import yfinance as yf
 
 
 # Loading the trained machine learning model
-model_path = "https://github.com/deepak2305nanda/AMPBA_FP1/blob/main/model.sav"
-with open(model_path, 'rb') as pickle_file:
-    model = cloudpickle.load(pickle_file)
+def load_model_from_github():
+    model_url = "https://raw.githubusercontent.com/deepak2305nanda/AMPBA_FP1/main/model.sav"
+    response = requests.get(model_url)
+    model_bytes = BytesIO(response.content)
+    return cloudpickle.load(model_bytes)
+
+model = load_model_from_github()
 
 # Mapping dictionary for sentiment labels
 sentiment_mapping = {0: 'Bearish', 1: 'Bullish'}
