@@ -2,3 +2,4 @@ matplotlib==3.4.3
 nltk==3.6.2
 yfinance==0.1.63
 cloudpickle==2.0.0
+streamlit==1.13.0
