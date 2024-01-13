@@ -4,7 +4,8 @@ import cloudpickle
 import requests
 from io import BytesIO
 import nltk
-nltk.data.path.append(r"/C:\Users\HP\FP1/to/nltk_data")
+import nltk
+nltk.download('punkt')
 nltk.download('stopwords')
 import streamlit as st
 import matplotlib.pyplot as plt
