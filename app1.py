@@ -10,7 +10,7 @@ import yfinance as yf
 
 
 # Loading the trained machine learning model
-model_path = "model.sav"
+model_path = "https://github.com/deepak2305nanda/AMPBA_FP1/blob/main/model.sav"
 with open(model_path, 'rb') as pickle_file:
     model = cloudpickle.load(pickle_file)
 
