@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import cloudpickle
 import requests
-from import BytesIO
+from io import BytesIO
 import nltk
 nltk.download('stopwords')
 import streamlit as st
