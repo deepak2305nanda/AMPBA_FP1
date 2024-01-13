@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import pickle
+import cloudpickle
 import streamlit as st
 import matplotlib.pyplot as plt
 import re
